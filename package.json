@@ -1,0 +1,24 @@
+{
+  "name": "bonbonery",
+  "version": "1.0.0",
+  "description": "A client and server code of a confectionery online shop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-backend": "npm install --prefix backend",
+    "install-frontend": "npm install --prefix frontend",
+    "install": "npm run install-backend && npm run install-frontend",
+    "deploy": "npm run build --prefix frontend && npm start --prefix backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mshokrnezhad/bonbonery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mshokrnezhad/bonbonery/issues"
+  },
+  "homepage": "https://github.com/mshokrnezhad/bonbonery#readme"
+}
