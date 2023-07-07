@@ -58,7 +58,12 @@ function Header() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography
+                    textAlign="center"
+                    sx={{ fontFamily: 'IRANSans' }}
+                  >
+                    {page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -75,7 +80,7 @@ function Header() {
                 md: 'none',
               },
               flexGrow: 0,
-              fontFamily: 'monospace',
+              fontFamily: 'IRANSans',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: '#333',
@@ -89,7 +94,12 @@ function Header() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: '#333', display: 'block' }}
+                sx={{
+                  my: 2,
+                  color: '#333',
+                  display: 'block',
+                  fontFamily: 'IRANSans',
+                }}
               >
                 {page}
               </Button>
@@ -103,7 +113,7 @@ function Header() {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
+              fontFamily: 'IRANSans',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: '#333',
