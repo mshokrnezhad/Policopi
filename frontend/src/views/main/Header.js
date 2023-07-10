@@ -60,7 +60,7 @@ function Header() {
                   fontFamily: 'IRANSans',
                 }}
               >
-                <a href="/">چگونگی</a>
+                <a href="/">hjaskhdjsadkasdhkjaksjdhjas</a>
               </MenuItem>
               <MenuItem
                 onClick={handleCloseNavMenu}
