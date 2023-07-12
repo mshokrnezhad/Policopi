@@ -6,8 +6,8 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import App from './App';
 import reducers from './reducers/reducers';
-import Header from './views/main/Header.main';
-import Sidebar from './views/main/Sidebar.main';
+import Header from './views/main/Header';
+import HeroSection from './views/main/HeroSection';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -17,7 +17,7 @@ root.render(
     store={createStore(reducers, composeEnhancers(applyMiddleware(thunk)))}
   >
     <Header />
-    <Sidebar />
+    <HeroSection />
     <App />
   </Provider>
 );

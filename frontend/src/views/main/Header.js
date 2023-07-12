@@ -10,6 +10,8 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
+const pages = ['درباره ما', 'تماس با ما', 'چگونگی'];
+
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -54,30 +56,16 @@ function Header() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              <MenuItem
-                onClick={handleCloseNavMenu}
-                sx={{
-                  fontFamily: 'IRANSans',
-                }}
-              >
-                <a href="/">hjaskhdjsadkasdhkjaksjdhjas</a>
-              </MenuItem>
-              <MenuItem
-                onClick={handleCloseNavMenu}
-                sx={{
-                  fontFamily: 'IRANSans',
-                }}
-              >
-                <a href="/">درباره ما</a>
-              </MenuItem>
-              <MenuItem
-                onClick={handleCloseNavMenu}
-                sx={{
-                  fontFamily: 'IRANSans',
-                }}
-              >
-                <a href="/">تماس با ما</a>
-              </MenuItem>
+              {pages.map((page) => (
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Typography
+                    textAlign="center"
+                    sx={{ fontFamily: 'IRANSans' }}
+                  >
+                    {page}
+                  </Typography>
+                </MenuItem>
+              ))}
             </Menu>
           </Box>
           <Typography
@@ -101,52 +89,21 @@ function Header() {
           >
             پلی کپی
           </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            <Button
-              variant="contained"
-              sx={{
-                my: 2,
-                backgroundColor: '#ffd43b',
-                color: '#333',
-                fontFamily: 'IRANSans',
-              }}
-            >
-              ثبت نام
-            </Button>
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{
-                my: 2,
-                color: '#333',
-                display: 'block',
-                fontFamily: 'IRANSans',
-              }}
-            >
-              تماس با ما
-            </Button>
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{
-                my: 2,
-                color: '#333',
-                display: 'block',
-                fontFamily: 'IRANSans',
-              }}
-            >
-              درباره ما
-            </Button>
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{
-                my: 2,
-                color: '#333',
-                display: 'block',
-                fontFamily: 'IRANSans',
-              }}
-            >
-              چگونگی
-            </Button>
+            {pages.map((page) => (
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{
+                  my: 2,
+                  color: '#333',
+                  display: 'block',
+                  fontFamily: 'IRANSans',
+                }}
+              >
+                {page}
+              </Button>
+            ))}
           </Box>
           <Typography
             variant="h6"
