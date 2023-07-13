@@ -10,7 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['درباره ما', 'تماس با ما', 'چگونگی'];
+const pages = ['چگونگی', 'درباره ما', 'تماس با ما'];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -27,7 +27,46 @@ function Header() {
     <AppBar position="static" sx={{ bgcolor: '#fff9db' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          {/* logo for desktop screen */}
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              flexGrow: 1,
+              fontFamily: 'IRANSans',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: '#333',
+              textDecoration: 'none',
+            }}
+          >
+            پلی کپی
+          </Typography>
+          {/* logo for mobile screen */}
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href=""
+            sx={{
+              mr: 2,
+              display: { xs: 'flex', md: 'none' },
+              flexGrow: 1,
+              fontFamily: 'IRANSans',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: '#333',
+              textDecoration: 'none',
+            }}
+          >
+            پلی کپی
+          </Typography>
+          {/* navigation for mobile screen */}
+          <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -68,28 +107,13 @@ function Header() {
               ))}
             </Menu>
           </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
+          {/* navigation for desktop screen */}
+          <Box
             sx={{
-              mr: 2,
-              display: {
-                xs: 'flex',
-                md: 'none',
-              },
               flexGrow: 0,
-              fontFamily: 'IRANSans',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: '#333',
-              textDecoration: 'none',
+              display: { xs: 'none', md: 'flex' },
             }}
           >
-            پلی کپی
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
@@ -105,23 +129,6 @@ function Header() {
               </Button>
             ))}
           </Box>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'IRANSans',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: '#333',
-              textDecoration: 'none',
-            }}
-          >
-            پلی کپی
-          </Typography>
         </Toolbar>
       </Container>
     </AppBar>
