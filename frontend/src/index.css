@@ -68,3 +68,6 @@ html {
     url('./fonts/IRANSans/ttf/IRANSansWeb_UltraLight.ttf') format('truetype');
   font-weight: 100;
 }
+.hero-img {
+  width: 100%;
+}
