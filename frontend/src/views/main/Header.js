@@ -24,7 +24,7 @@ function Header() {
   };
 
   return (
-    <AppBar position="static" sx={{ bgcolor: '#fff9db' }}>
+    <AppBar position="static" sx={{ bgcolor: '#fff6d8' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* logo for desktop screen */}
