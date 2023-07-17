@@ -8,6 +8,7 @@ import App from './App';
 import reducers from './reducers/reducers';
 import Header from './views/main/Header';
 import HeroSection from './views/main/HeroSection';
+import HowSection from './views/main/HowSection';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -18,6 +19,7 @@ root.render(
   >
     <Header />
     <HeroSection />
+    <HowSection />
     <App />
   </Provider>
 );
