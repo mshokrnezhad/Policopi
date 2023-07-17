@@ -10,7 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['چگونگی', 'درباره ما', 'تماس با ما'];
+const pages = ['چگونگی', 'درباره ما', 'تماس با ما', 'ثبت ‌نام کن'];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -24,7 +24,7 @@ function Header() {
   };
 
   return (
-    <AppBar position="static" sx={{ bgcolor: '#fff6d8' }}>
+    <AppBar position="static" sx={{ bgcolor: '#fff6d8', height: '9.6rem' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* logo for desktop screen */}
@@ -38,6 +38,7 @@ function Header() {
               display: { xs: 'none', md: 'flex' },
               flexGrow: 1,
               fontFamily: 'IRANSans',
+              fontSize: '3.2rem',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: '#333',
@@ -57,6 +58,7 @@ function Header() {
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
               fontFamily: 'IRANSans',
+              fontSize: '2rem',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: '#333',
@@ -99,7 +101,7 @@ function Header() {
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography
                     textAlign="center"
-                    sx={{ fontFamily: 'IRANSans' }}
+                    sx={{ fontFamily: 'IRANSans', fontSize: '1.4rem' }}
                   >
                     {page}
                   </Typography>
@@ -123,6 +125,7 @@ function Header() {
                   color: '#333',
                   display: 'block',
                   fontFamily: 'IRANSans',
+                  fontSize: '1.6rem',
                 }}
               >
                 {page}
